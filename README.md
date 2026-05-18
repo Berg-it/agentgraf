@@ -20,6 +20,16 @@ pip install agentgraf[langchain]
 pip install agentgraf
 ```
 
+## Screenshots
+
+**RunsPanel** — list of agent runs with KPIs, duration bars, token counts, and error status:
+
+![RunsPanel](assets/1.png)
+
+**TraceTreePanel** — hierarchical span tree with per-span latency and token counts:
+
+![TraceTreePanel](assets/2.png)
+
 ## Why AgentGraf?
 
 | Tool | Setup | Grafana integration |
