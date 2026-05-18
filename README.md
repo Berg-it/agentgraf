@@ -128,8 +128,37 @@ Two panels are included:
 - **RunsPanel** — list of agent runs with duration bars, token counts, and status
 - **TraceTreePanel** — hierarchical span tree (like Jaeger, but inside Grafana)
 
-Install from the `grafana-plugin/` directory or via the Grafana plugin registry
-(see [`grafana-plugin/README.md`](grafana-plugin/README.md)).
+### Installation (self-hosted Grafana)
+
+**1. Build the plugin**
+
+```bash
+cd grafana-plugin
+npm install
+npm run build
+```
+
+**2. Copy to your Grafana plugins directory**
+
+```bash
+cp -r dist/ /var/lib/grafana/plugins/berg-it-agentgraf-ai-observability/
+```
+
+**3. Allow the unsigned plugin** in `grafana.ini`:
+
+```ini
+[plugins]
+allow_loading_unsigned_plugins = berg-it-agentgraf-ai-observability
+```
+
+Or via environment variable (e.g. in `docker-compose.yml`):
+
+```yaml
+environment:
+  - GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=berg-it-agentgraf-ai-observability
+```
+
+**4. Restart Grafana** — the plugin appears in the panel list.
 
 ## Project structure
 
