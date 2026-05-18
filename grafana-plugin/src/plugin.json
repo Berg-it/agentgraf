@@ -1,0 +1,26 @@
+{
+  "type": "panel",
+  "name": "AgentGraf",
+  "id": "berg-it-agentgraf-ai-observability",
+  "info": {
+    "author": {
+      "name": "Berg-it",
+      "url": "https://github.com/Berg-it"
+    },
+    "description": "AI agent tracing for Grafana — visualize LangChain/LangGraph spans directly from Loki",
+    "logos": {
+      "small": "logo.svg",
+      "large": "logo.svg"
+    },
+    "screenshots": [
+      { "name": "Runs Dashboard", "path": "img/runs-dashboard.png" },
+      { "name": "Trace Explorer", "path": "img/trace-explorer.png" }
+    ],
+    "version": "0.1.0",
+    "updated": "2026-05-12"
+  },
+  "dependencies": {
+    "grafanaDependency": ">=10.0.0",
+    "plugins": []
+  }
+}
